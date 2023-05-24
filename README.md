@@ -286,7 +286,13 @@ ___
 
 # Task 25.
 
+Вывести названия групп и их рейтинги с уточнением имен полей именем таблицы.
 
+SELECT Groups.Name, Groups.Rating
+FROM Groups
+
+SELECT *
+FROM Groups;
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/25.png)
 
