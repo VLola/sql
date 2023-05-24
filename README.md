@@ -286,6 +286,8 @@ ___
 
 # Task 25.
 
+אמשערןחנמטמטמ
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/25.png)
 
 ___
