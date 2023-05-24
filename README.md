@@ -272,6 +272,14 @@ ___
 
 # Task 24.
 
+Вывести таблицу кафедр, но расположить ее поля в обратном порядке.
+
+SELECT [Name],[Financing],[Id]
+FROM [Academy].[dbo].[Departments];
+
+SELECT *
+FROM Departments;
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/24.png)
 
 ___
