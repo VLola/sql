@@ -259,6 +259,15 @@ ___
 
 # Task 23.
 
+¬ывести фамилии врачей, начинающиес€ на букву УNФ.
+
+SELECT Surname
+FROM Doctors
+WHERE Surname LIKE 'N%';
+
+SELECT *
+FROM Doctors
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/23.png)
 
 ___
