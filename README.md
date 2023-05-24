@@ -38,11 +38,17 @@ ___
 
 # Task 7.
 
+SELECT *
+FROM Wards
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/7.png)
 
 ___
 
 # Task 8.
+
+SELECT Surname, Phone
+FROM Doctors
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/8.png)
 
@@ -50,11 +56,25 @@ ___
 
 # Task 9.
 
+SELECT Floor
+FROM Wards
+GROUP BY Floor
+
+SELECT *
+FROM Wards
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/9.png)
 
 ___
 
 # Task 10.
+
+SELECT Name, Severity
+FROM Diseases
+WHERE Name in ('Виброз','Бульбит') and Severity in (1,2)
+
+SELECT *
+FROM Diseases
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/10.png)
 
@@ -62,11 +82,24 @@ ___
 
 # Task 11.
 
+SELECT Name Имя, Surname Фамилия, Salary Зарплата
+FROM Doctors
+
+SELECT *
+FROM Doctors
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/11.png)
 
 ___
 
 # Task 12.
+
+SELECT Name
+FROM Departments
+WHERE Building = 5 and Financing < 30000
+
+SELECT *
+FROM Departments
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/12.png)
 
@@ -74,11 +107,27 @@ ___
 
 # Task 13.
 
+SELECT Name
+FROM Departments
+WHERE Building = 3 and Financing > = 12000 and Financing < 15000
+
+SELECT *
+FROM Departments
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/13.png)
 
 ___
 
 # Task 14.
+
+Вывести названия палат, расположенных в корпусах 4 и 5 на 1-м этаже
+
+SELECT Name
+FROM Wards
+WHERE Floor = 1 and (Building = 4 or Building = 5)
+
+SELECT *
+FROM Wards
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/14.png)
 
@@ -86,11 +135,29 @@ ___
 
 # Task 15.
 
+Вывести названия, корпуса и фонды финансирования отделений, расположенных в корпусах 3 или 6 и имеющих фонд финансирования меньше 11000 или больше 25000
+
+SELECT Name, Building, Financing
+FROM Departments
+WHERE (Building = 3 or Building = 6) and (Financing < 11000 or Financing > 25000)
+
+SELECT *
+FROM Departments
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/15.png)
 
 ___
 
 # Task 16.
+
+Вывести фамилии врачей, чья зарплата (сумма ставки и надбавки) превышает 1500.
+
+SELECT Surname
+FROM Doctors
+WHERE Salary + Premium > 1500
+
+SELECT *
+FROM Doctors
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/16.png)
 
@@ -98,11 +165,31 @@ ___
 
 # Task 17.
 
+Вывести фамилии врачей, у которых половина зарплаты превышает троекратную надбавку.
+
+SELECT Surname
+FROM Doctors
+WHERE Salary/2 > Premium*3
+
+SELECT *
+FROM Doctors
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/17.png)
 
 ___
 
 # Task 18.
+
+Вывести названия обследований без повторений, проводимых в первые три дня недели с 12:00 до 15:00.
+
+SELECT Name
+FROM Examinations
+WHERE DayOfWeek in (1,2,3) and StartTime < = '12:00:00' and EndTime > = '15:00:00'
+
+В условии без повторений, но оно не может повторяться так как Name уникально в таблице
+
+SELECT *
+FROM Examinations
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/18.png)
 
@@ -110,17 +197,46 @@ ___
 
 # Task 19.
 
+Вывести названия и номера корпусов отделений, расположенных в корпусах 1, 3, 8 или 10.
+
+SELECT Name, Building
+FROM Departments
+WHERE Building in (1,3,8,10) 
+
+Корпусов в таблице по умолчанию: Должно быть в диапазоне от 1 до 5.(Максимум 5)
+
+SELECT *
+FROM Departments
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/19.png)
 
 ___
 
 # Task 20.
 
+Вывести названия заболеваний всех степеней тяжести, кроме 1-й и 2-й.
+
+SELECT Name
+FROM Diseases
+WHERE Severity != 1 and Severity != 2
+
+SELECT *
+FROM Diseases
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/20.png)
 
 ___
 
 # Task 21.
+
+Вывести названия отделений, которые не располагаются в 1-м или 3-м корпусе.
+
+SELECT Name
+FROM Departments
+WHERE Building != 1 and Building != 3
+
+SELECT *
+FROM Departments
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/21.png)
 
