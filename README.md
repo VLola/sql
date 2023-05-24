@@ -244,6 +244,15 @@ ___
 
 # Task 22.
 
+Вывести названия отделений, которые располагаются в 1-м или 3-м корпусе.
+
+SELECT Name
+FROM Departments
+WHERE Building in (1,3)
+
+SELECT *
+FROM Departments
+
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/22.png)
 
 ___
