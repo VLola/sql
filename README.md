@@ -1,5 +1,3 @@
-___
-
 # Task 1.
 
 ![Image text](https://raw.githubusercontent.com/VLola/sql/master/images/1.png)
